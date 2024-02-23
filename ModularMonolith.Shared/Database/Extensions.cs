@@ -22,9 +22,9 @@ public static class Extensions
     public static IServiceCollection AddPostgres<T>(this IServiceCollection services) where T : DbContext
     {
         var configuration = services.BuildServiceProvider().GetRequiredService<IConfiguration>();
-        var connectionString = configuration[$"{SectionName}:{nameof(PostgresOptions.ConnectionString)}"];
+        var connectionString = configuration[$"{SectionName}:connectionString"];
         services.AddDbContext<T>(x => x.UseNpgsql(connectionString));
-
+        services.AddHostedService<DbContextAppInitializer>();
         return services;
     }
 }

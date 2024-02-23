@@ -1,5 +1,6 @@
 using ModularMonolith.Modules.Users.Api;
-using ModularMonolith.Modules.Wallets.Api;
+using Wolverine;
+using Wolverine.RabbitMQ;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,8 +8,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
+builder.Host.UseWolverine(opts =>
+{
+    opts.UseRabbitMq(new Uri("amqps://"));
+    
+    opts.PublishAllMessages().ToRabbitQueue("owner");
+});
+
 builder.Services.AddUsersModule();
-builder.Services.AddWalletsModule();
 
 var app = builder.Build();
 
@@ -23,6 +30,5 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseUsersModule(app.MapGroup);
-app.UseWalletsModule();
 
 app.Run();

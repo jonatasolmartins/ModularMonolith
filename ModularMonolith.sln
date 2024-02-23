@@ -22,13 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Shared", "M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifications", "Notifications", "{5980A982-7329-4AC0-8B0E-5CC9440F6D7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Modules.Wallets.Api", "ModularMonolith.Modules.Wallets.Api\ModularMonolith.Modules.Wallets.Api.csproj", "{7D83E931-508B-4743-B650-0C4FFFE624F6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Modules.Wallets.Application", "ModularMonolith.Modules.Wallets.Application\ModularMonolith.Modules.Wallets.Application.csproj", "{36AC7882-E98F-46A1-BD9A-858FFEDEE48E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Modules.Wallets.Core", "ModularMonolith.Modules.Wallets.Core\ModularMonolith.Modules.Wallets.Core.csproj", "{343009E6-110B-4493-898E-8B906C8F086E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularMonolith.Modules.Wallets.Infrastructure", "ModularMonolith.Modules.Wallets.Infrastructure\ModularMonolith.Modules.Wallets.Infrastructure.csproj", "{F68BF1CA-5B9A-4CFF-98C9-2491AE549AA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletApi.Modules.Wallets.Shared", "..\WalletApi\WalletApi.Modules.Wallets.Shared\WalletApi.Modules.Wallets.Shared.csproj", "{3A999525-D836-4782-9601-5AE5102D191D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,10 +38,7 @@ Global
 		{C2E8701D-FAC8-4CA4-8E43-5B14D6361B77} = {BDFEB688-EC30-43F7-93DA-3707843AE62A}
 		{723426D5-6438-42BB-BEA9-E9FA96FDF2F2} = {16507C05-F11A-4029-8952-B5EDE2A4DA0D}
 		{5980A982-7329-4AC0-8B0E-5CC9440F6D7F} = {77E704BC-553B-4142-B07A-09869886F374}
-		{7D83E931-508B-4743-B650-0C4FFFE624F6} = {E3E1894D-AC39-40A0-B595-D7416B7887EF}
-		{36AC7882-E98F-46A1-BD9A-858FFEDEE48E} = {E3E1894D-AC39-40A0-B595-D7416B7887EF}
-		{343009E6-110B-4493-898E-8B906C8F086E} = {E3E1894D-AC39-40A0-B595-D7416B7887EF}
-		{F68BF1CA-5B9A-4CFF-98C9-2491AE549AA9} = {E3E1894D-AC39-40A0-B595-D7416B7887EF}
+		{3A999525-D836-4782-9601-5AE5102D191D} = {E3E1894D-AC39-40A0-B595-D7416B7887EF}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A196685A-06E5-4B90-AE9C-D1DAC3D83739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -70,21 +61,9 @@ Global
 		{723426D5-6438-42BB-BEA9-E9FA96FDF2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{723426D5-6438-42BB-BEA9-E9FA96FDF2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{723426D5-6438-42BB-BEA9-E9FA96FDF2F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D83E931-508B-4743-B650-0C4FFFE624F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D83E931-508B-4743-B650-0C4FFFE624F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D83E931-508B-4743-B650-0C4FFFE624F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D83E931-508B-4743-B650-0C4FFFE624F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36AC7882-E98F-46A1-BD9A-858FFEDEE48E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36AC7882-E98F-46A1-BD9A-858FFEDEE48E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36AC7882-E98F-46A1-BD9A-858FFEDEE48E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36AC7882-E98F-46A1-BD9A-858FFEDEE48E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{343009E6-110B-4493-898E-8B906C8F086E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{343009E6-110B-4493-898E-8B906C8F086E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{343009E6-110B-4493-898E-8B906C8F086E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{343009E6-110B-4493-898E-8B906C8F086E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F68BF1CA-5B9A-4CFF-98C9-2491AE549AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F68BF1CA-5B9A-4CFF-98C9-2491AE549AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F68BF1CA-5B9A-4CFF-98C9-2491AE549AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F68BF1CA-5B9A-4CFF-98C9-2491AE549AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A999525-D836-4782-9601-5AE5102D191D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A999525-D836-4782-9601-5AE5102D191D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A999525-D836-4782-9601-5AE5102D191D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A999525-D836-4782-9601-5AE5102D191D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

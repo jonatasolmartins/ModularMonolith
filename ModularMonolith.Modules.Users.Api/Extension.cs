@@ -21,9 +21,9 @@ public static class Extension
             var usersEndPoint = endpoints.MapGroup("/users");
             usersEndPoint.MapPost("/create", UserEndpoint.CreateUser);
             usersEndPoint.MapGet("/verify", UserEndpoint.VerifyUser);
-            usersEndPoint.MapGet("/get/{id:guid}", UserEndpoint.GetUser);
-            usersEndPoint.MapGet("/get/{email}", UserEndpoint.Get);
-            usersEndPoint.MapGet("/get", UserEndpoint.GetAllUser);
+            usersEndPoint.MapGet("/{id:guid}", UserEndpoint.GetUser);
+            usersEndPoint.MapGet("/{email}", UserEndpoint.Get);
+            usersEndPoint.MapGet("/", UserEndpoint.GetAllUser);
         });
         
         return app;

@@ -7,15 +7,25 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\WalletApi\WalletApi.Modules.Wallets.Shared\WalletApi.Modules.Wallets.Shared.csproj" />
       <ProjectReference Include="..\ModularMonolith.Modules.Users.Shared\ModularMonolith.Modules.Users.Shared.csproj" />
       <ProjectReference Include="..\ModularMonolith.Shared\ModularMonolith.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.2">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
       <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+      <PackageReference Include="WolverineFx" Version="1.19.0" />
     </ItemGroup>
 
     <ItemGroup>
