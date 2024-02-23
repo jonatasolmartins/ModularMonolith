@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ModularMonolith.Modules.Users.Shared.DTO;

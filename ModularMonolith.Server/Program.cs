@@ -1,3 +1,7 @@
+using System;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using ModularMonolith.Modules.Users.Api;
 using Wolverine;
 using Wolverine.RabbitMQ;
