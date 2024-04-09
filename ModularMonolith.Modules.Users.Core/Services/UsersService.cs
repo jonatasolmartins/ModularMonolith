@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using ModularMonolith.Modules.Users.Core.DAL;
@@ -7,6 +8,7 @@ using ModularMonolith.Modules.Users.Shared.DTO;
 using ModularMonolith.Modules.Users.Shared.Events;
 using Wolverine;
 
+[assembly: InternalsVisibleTo("ModularMonolith.Modules.Users.Test")]
 
 namespace ModularMonolith.Modules.Users.Core.Services;
 
